@@ -22,15 +22,20 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   border-color: var(--border-color);
+  box-shadow: var(--box-shadow);
   transition: 0.6s;
 }
 
 body.dark-mode {
   --bg-color: #1e1e1e;
   --text-color: #f1f1f1;
-  --border-color: white; /* override in dark mode */
+  --border-color: #067D85; /* override in dark mode */ 
 }
 
+body.dark-mode #box-shadow {
+  box-shadow: 0 0 5px var(--border-color), 0 0 10px var(--border-color);
+}
+          
 #theme-toggle {
   position: fixed;
   top: 1rem;
@@ -46,7 +51,7 @@ body.dark-mode {
   border-radius: 50px;
   border-width: 0.6px;
   border-style: solid;
-  border-color: rgba(6, 125, 133, 1) var(--border-color);
+  border-color: rgba(6, 125, 133, 1);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -54,6 +59,10 @@ body.dark-mode {
 
   /* Here's the magic: */
   transition: transform 0.2s ease-in-out, opacity 0.3s ease;
+}
+
+body.dark-mode #theme-toggle {
+  box-shadow: 0 0 5px var(--border-color), 0 0 10px var(--border-color);
 }
 
 #theme-toggle:hover {
@@ -65,7 +74,7 @@ body.dark-mode {
 
 </head>
 <body>
-    <div class="first-div">
+    <div class="first-div" id="">
         <div class="identity">
             <h1>MD Tanzim Hossain Mridha</h1>
             <p class="sub-title">Front-End WordPress Developer | Semantic SEO Expert for B2C Brands | Figma-to-Webflow Pro</p>
@@ -87,13 +96,14 @@ body.dark-mode {
         </div>
     </div>
 
-    <div class="second-div">
+    <div class="second-div" id="">
         <h2 class="h-aboutme">About Me</h2>
         <p>Hi, it's Tanzim, Front-End WordPress Developer with strong SEO expertise. I build fast, responsive, and accessible websites from Figma using HTML5, CSS3, JavaScript, and modern frameworks like Webflow. Skilled in Semantic SEO, I create structured, search-optimised content that drives visibility and aligns with user intent. I bridge design and functionality to deliver seamless, high-performing web experiences.</p>
     </div>
 
-    <div class="third-div">
-        <div class="skills">
+  <div class="parent-third-div" id="">
+    <div class="third-div" id="">
+        <div class="skills" id="">
             <h2>Skills</h2>
             <h3>1. Front-end Development</h3>
             <li>HTML5, CSS3, JavaScript (ES6+), jQuery, Responsive Design, Elementor Expert</li>
@@ -104,8 +114,32 @@ body.dark-mode {
             <h3>4. Additional</h3>
             <li>Shopify Product Listing, Store Manager and Customer Support Assistant</li>
         </div>
-        
-        <div class="experience">
+
+        <div class="project">
+            <h2>Selected Project</h2>
+
+            <div class="project-child">              
+              <h3 style="margin: 0px 0px 7px 0px;">Medicology Health - Weight Loss Website</h3>
+              <p>Built a 12-page responsive WordPress site for a health clinic, featuring advanced JS/CSS animations, mega menu, product carousels, and custom templates. Boosted user engagement by 40%.</p>
+              <a href="https://www.linkedin.com/posts/md-tanzim-h-0bb3a6230_wordpress-website-weightloss-activity-7319766162500722688-qKgi?utm_source=share&utm_medium=member_desktop&rcm=ACoAADm49w8Byd7CfmGzzayBFBQTYmqlVcU10pM" target="_blank">Check Project Details</a>
+            </div>
+
+            <div class="project-child">
+              <h3 style="margin: 0px 0px 7px 0px;">Synster Platform LLC</h3>
+              <p>Redesigned and rebuilt a community-driven web platform using WordPress and Elementor, where people can offer help or request support. Focused on making the site easier to use with cleaner layouts, smoother navigation, and a simpler sign-up process. Added real-time updates, a more engaging contact form, and made sure everything looks great on any device. All features were built using the free version of Elementor, keeping things smart and budget-friendly—while still delivering a polished, professional result.</p>
+              <a href="https://www.linkedin.com/posts/md-tanzim-h-0bb3a6230_wordpress-webdesign-elementor-activity-7336376296928616448-K66l?utm_source=share&utm_medium=member_desktop&rcm=ACoAADm49w8Byd7CfmGzzayBFBQTYmqlVcU10pM" target="_blank">Check Project Details</a>
+            </div>
+
+            <div class="project-child">
+              <h3 style="margin: 0px 0px 7px 0px;">Content Strategy & SEO – HTD Media</h3>
+              <p>In this project I was hired for On-Page content strategy. As part of a year-long content project with HTD Media, I wrote and optimized over 100 articles with a clear focus on helping the client dominate the first page of Google search results. More than 80% of the content ranked on page one, with over 20 articles reaching the #1 spot and 50+ landing in the top 5. I focused on writing clear, informative, and engaging content tailored to different search intents and user needs. By combining SEO best practices with a strong sense of structure, readability, and real value for readers, I was able to consistently create content that both users and search engines loved.</p>
+              <a href="https://www.linkedin.com/in/md-tanzim-h-0bb3a6230/details/projects/?profileId=ACoAADm49w8Byd7CfmGzzayBFBQTYmqlVcU10pM" target="_blank">Check Project Details</a>
+            </div>
+        </div>
+      </div>
+
+      <div class="third-div-2">
+        <div class="experience" id=""> 
             <h2>Experience</h2>
             <div class="synster">
                 <h3 style="margin: -5px 0px 10px 0px;">1. Synster Platform LLC</h3>
@@ -135,26 +169,13 @@ body.dark-mode {
 
         </div>
 
-        <div class="project">
-            <h2>Selected Project</h2>
-
-            <div class="project-child">              
-              <h3 style="margin: 0px 0px 7px 0px;">Medicology Health - Weight Loss Website</h3>
-              <p>Built a 12-page responsive WordPress site for a health clinic, featuring advanced JS/CSS animations, mega menu, product carousels, and custom templates. Boosted user engagement by 40%.</p>
-              <a href="https://www.linkedin.com/posts/md-tanzim-h-0bb3a6230_wordpress-website-weightloss-activity-7319766162500722688-qKgi?utm_source=share&utm_medium=member_desktop&rcm=ACoAADm49w8Byd7CfmGzzayBFBQTYmqlVcU10pM" target="_blank">Check Project Details</a>
-            </div>
-
-            <div class="project-child">
-              <h3 style="margin: 0px 0px 7px 0px;">Synster Platform LLC</h3>
-              <p>Redesigned and rebuilt a community-driven web platform using WordPress and Elementor, where people can offer help or request support. Focused on making the site easier to use with cleaner layouts, smoother navigation, and a simpler sign-up process. Added real-time updates, a more engaging contact form, and made sure everything looks great on any device. All features were built using the free version of Elementor, keeping things smart and budget-friendly—while still delivering a polished, professional result.</p>
-              <a href="https://www.linkedin.com/posts/md-tanzim-h-0bb3a6230_wordpress-webdesign-elementor-activity-7336376296928616448-K66l?utm_source=share&utm_medium=member_desktop&rcm=ACoAADm49w8Byd7CfmGzzayBFBQTYmqlVcU10pM" target="_blank">Check Project Details</a>
-            </div>
-
-            <div class="project-child">
-              <h3 style="margin: 0px 0px 7px 0px;">Content Strategy & SEO – HTD Media</h3>
-              <p>In this project I was hired for On-Page content strategy. As part of a year-long content project with HTD Media, I wrote and optimized over 100 articles with a clear focus on helping the client dominate the first page of Google search results. More than 80% of the content ranked on page one, with over 20 articles reaching the #1 spot and 50+ landing in the top 5. I focused on writing clear, informative, and engaging content tailored to different search intents and user needs. By combining SEO best practices with a strong sense of structure, readability, and real value for readers, I was able to consistently create content that both users and search engines loved.</p>
-              <a href="https://www.linkedin.com/in/md-tanzim-h-0bb3a6230/details/projects/?profileId=ACoAADm49w8Byd7CfmGzzayBFBQTYmqlVcU10pM" target="_blank">Check Project Details</a>
-            </div>
+        <div class="education" id="">
+            <h2>Education</h2>
+             <div class="google-my-business">
+                    <li>Degree: Bachelor's of Business Administration</li>
+                    <li>Institution: Leading University</li>
+                    <li>Year: 2022</li>
+                </div>
         </div>
         
         <div class="Certifications">
@@ -180,29 +201,21 @@ body.dark-mode {
                     <li>Issued: Aug 2023</li>
                     <li>Credential ID: 189255348</li>
                     <li style="margin: 7px 0px 0px 0px;"><a href="https://skillshop.exceedlms.com/student/award/MX2p5P9y5K67Nv2zK6oeEEHe" target="_blank">See Credential</a></li>
-                </div>
+                </div>        
         </div>
-
-        <div class="education">
-            <h2>Education</h2>
-             <div class="google-my-business">
-                    <li>Degree: Bachelor's of Business Administration</li>
-                    <li>Institution: Leading University</li>
-                    <li>Year: 2022</li>
-                </div>
-        </div>
+      </div>
     </div>
 
-    <footer>
+    <footer id="">
         <div class="footer-div">
           <img class="footer-image" src="./icons and images/MD Tanzim Hossain Mridha.png" alt="MD Tanzim Hossain Mridha">
           <figure>
            <blockquote><p>“Let’s build something incredible. Whether you're looking to grow your brand, convert more visitors, or just modernize your site — I’m ready.”</p></blockquote>
            <figcaption>— MD Tanzim Hossain Mridha</figcaption>
            <div class="footer-buttons">
-            <a class="anchor-btn" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1elJROLvR2wgHhNlWNWVm1Au2jwomlsbFGBviqWUTLtyA2HtHlTwxePCkiFudgcYrayQOqpy5q" target="_blank">Book a 1:1 Call</a>
-            <a class="anchor-btn" href="Follow me on LinkedIn: www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=md-tanzim-h-0bb3a6230" target="_blank">DM On Linkedin</a>
-            <a class="anchor-btn" href="https://github.com/jafirwadi" target="_blank">Github</a>
+            <a class="anchor-btn" id="box-shadow" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1elJROLvR2wgHhNlWNWVm1Au2jwomlsbFGBviqWUTLtyA2HtHlTwxePCkiFudgcYrayQOqpy5q" target="_blank">Book a 1:1 Call</a>
+            <a class="anchor-btn" id="box-shadow" href="https://www.linkedin.com/in/md-tanzim-h-0bb3a6230/" target="_blank">DM On Linkedin</a>
+            <a class="anchor-btn" id="box-shadow" href="https://github.com/jafirwadi" target="_blank">Github</a>
            </div>
           </figure>
         </div>
