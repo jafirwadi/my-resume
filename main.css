@@ -28,7 +28,6 @@ h2 {
     margin: 0;
 }
 
-
 h3 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1.2rem;
@@ -73,17 +72,17 @@ li {
 
 .first-div {
     margin: 0;
-    padding: 30px 50px 30px 50px;
+    padding: 30px 40px 30px 40px;
     display: flex;
     flex-direction: row;
     gap: 100px;
     justify-content: space-between;
     align-items: center;
-    width: 850px;
+    width: 870px;
     height: auto;
     border-width: 0px 1px 1px 1px;
     border-style: solid;
-    border-color: black;
+    border-color: var(--border-color);
     align-self: center;
 }
 
@@ -111,54 +110,95 @@ li {
 
 .second-div {
     margin: 0;
-    padding: 30px 50px;
+    padding: 30px 40px;
     display: flex;
     flex-direction: row;
     gap: 50px;
     justify-content: space-between;
     align-items: flex-start;
-    width: 850px;
+    width: 870px;
     height: auto;
     border-width: 0px 1px 1px 1px;
     border-style: solid;
-    border-color: black;
+    border-color: var(--border-color);
     align-self: center;
+}
+
+.parent-third-div {
+    margin: 0;
+    padding: 0;
+    width: 950px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-self: center;    
+    justify-content: flex-start;
+    gap: 0px;
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-color: var(--border-color);
 }
 
 .third-div {
     margin: 0;
     padding: 0;
-    width: 950px;
+    width: 475px;
     height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
     gap: 0px;
-    border-width: 0px 1px 1px 1px;
+    border-width: 0px 1px 0px 0px;
     border-style: solid;
-    border-color: black;
-    align-self: center;
+    border-color: var(--border-color);
 }
 
 .skills {
     margin: 0;  
-    padding: 30px 50px;
+    padding: 30px 40px;
     display: flex;
     flex-direction: column;
-    border-width: 0px 1px 1px 0px;
+    width: 83%;
+    border-width: 0px 0px 1px 0px;
     border-style: solid;
-    border-color: black;
+    border-color: var(--border-color);
+}
+
+.project {
+    margin: 0;  
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    width: 83%;
+    gap: 30px;
+}
+
+.project-child {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.third-div-2 {
+    margin: 0;
+    padding: 0;
+    width: 475px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-self: center;
 }
 
 .experience {
     margin: 0;  
-    padding: 30px 50px;
+    padding: 30px 40px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 83%;
     border-width: 0px 0px 1px 0px;
     border-style: solid;
-    border-color: black;
+    border-color: var(--border-color);
 }
 
 testimonial {
@@ -179,41 +219,22 @@ testimonial {
     margin: -3px 0px 0px 0px;
 }
 
-.project {
-    margin: 0;  
-    padding: 30px 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    border-width: 0px 1px 1px 0px;
-    border-style: solid;
-    border-color: black;
-}
-
-.project-child {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 .education {
     margin: 0;  
-    padding: 30px 50px;
+    padding: 30px 40px;
     display: flex;
     flex-direction: column;
+    width: 83%;
     gap: 20px;
-    border-width: 0px 1px 0px 0px;
-    border-style: solid;
-    border-color: black;
+    border-bottom: 1px solid var(--border-color);
 }
-
 
 .Certifications {
     margin: 0;  
-    padding: 30px 50px;
+    padding: 30px 40px;
     display: flex;
     flex-direction: column;
-
+    width: 83%;
 }
 
 .google-my-business {
@@ -222,6 +243,7 @@ testimonial {
     display: flex;
     flex-direction: column;
 }
+
 
 footer {
     margin: 0;
@@ -234,7 +256,7 @@ footer {
     justify-items: center;
     border-width: 0px 1px 1px 1px;
     border-style: solid;
-    border-color: black;
+    border-color: var(--border-color);
     
 }
 
